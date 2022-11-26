@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/random-background.css">
+</head>
+<body>
+    <h1>Welcome</h1>
+    <button>Click Me</button>
+    <button><a href="/index.html">Home</a></button>
+    <pre>
+        <code>
+            const btn=document.querySelector('button');
+            const heading=document.querySelector('h1');
+
+            function makeRandomColor(){
+                const r=Math.floor(Math.random()*255);
+                const g=Math.floor(Math.random()*255);
+                const b=Math.floor(Math.random()*255);
+                const randomColor=`rgb(${r},${g},${b})`;
+                return randomColor;
+            }
+
+            btn.addEventListener('click',function(){
+                const newClr=makeRandomColor();
+                document.body.style.backgroundColor=newClr;
+                heading.innerText=newClr;
+            }   
+            )
+        </code>
+    </pre>
+    <script src="/random-background.js"></script>
+</body>
+</html>
